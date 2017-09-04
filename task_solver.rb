@@ -13,6 +13,10 @@ module AbramovTasks1
     end
     answers
   end
+
+  def d_331b
+    print "WHYYYY!"
+  end
 end
 
 # Second module
@@ -54,8 +58,8 @@ class AbramovSolver
     task_number = gets.chomp
     return if task_number == 'exit' || task_number.empty?
     return "We can't solve such a complex task :D" unless @tasks.find { |x| x.include?(task_number) }
-    puts "To solve this task, you need to pass
-          #{method("t_#{task_number}").arity} arguments, separated by comma:"
+    puts send("d_#{task_number}") if methods.include?("d_#{task_number}")
+    puts "To solve this task, you need to pass #{method("t_#{task_number}").arity} argument(s), (can be separated by comma):"
     arguments = gets.chomp.split(',')
     puts send("t_#{task_number}", *arguments)
     puts "We hope you are happy with our solution!
