@@ -64,5 +64,5 @@ class AbramovSolver
   end
 end
 
-abramov = MyClass.new
+abramov = AbramovSolver.new
 abramov.start
