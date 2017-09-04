@@ -37,7 +37,7 @@ class AbramovSolver
 
   def initialize
     @tasks = []
-    @modules = MyClass.included_modules.reject do |item|
+    @modules = AbramovSolver.included_modules.reject do |item|
       ['JSON::Ext::Generator::GeneratorMethods::Object',
        'Kernel'].include?(item.to_s)
     end
