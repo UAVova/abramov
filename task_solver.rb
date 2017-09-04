@@ -1,5 +1,5 @@
 
-module MyModule
+module AbramovTasks1
   def t_331b(n)
     answers = []
     n = n.to_i
@@ -16,7 +16,7 @@ module MyModule
 end
 
 # Second module
-module SecondModule
+module AbramovTasks2
   def t_108(n)
     n = n.to_i
     pow = 0
@@ -30,9 +30,9 @@ module SecondModule
 end
 
 # Abramov tasks solver
-class MyClass
-  include MyModule
-  include MyModuleW
+class AbramovSolver
+  include AbramovTasks1
+  include AbramovTasks2
   attr_accessor :modules, :tasks
 
   def initialize
